@@ -1,9 +1,42 @@
-html, body{
+body{
     font-family: Helvetica, 'sans-serif';
+}
+
+main{
+    background-color: rgb(44, 41, 41);
 }
 
 .container{
     padding: 0 10px;
+}
+
+.titulo-secao{
+    color: white;
+    font-size: 1.6em;
+}
+
+.btn-anterior, .btn-proximo{
+    color: #ffa90c;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 2.2em;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-anterior{
+    position: absolute;
+    left: 0;
+}
+
+.btn-proximo{
+    position: absolute;
+    right: 0;
 }
 
 /*HEADER*/
@@ -131,44 +164,40 @@ html, body{
 }
 
 /*CARROSEL DE APRESENTAÇÃO DE CONSOLES*/
-.btn-anterior, .btn-proximo{
-    color: #ffa90c;
-    background-color: rgba(255, 255, 255, 0.4);
-    font-size: 2.2em;
-    border-radius: 50%;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    width: 50px;
-    height: 50px;
+.carrosel-consoles .btn-anterior, .carrosel-consoles .btn-proximo{
     margin-top: 135px;
 }
 
-.btn-anterior{
-    position: absolute;
-    left: 0;
-}
-
-.btn-proximo{
-    position: absolute;
-    right: 0;
-}
-
-.container-carrosel{
+.carrosel-consoles{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-gap: 0;
     margin: auto;
     padding: 0;
-    overflow-x: hidden;
     height: 317px;
     max-width: 1250px;
+    overflow-x: hidden;
     box-sizing: border-box;
+    position: relative;
 }
 
-.container-carrosel img{
+/*CARROSEL DE CATEGORIAS*/
+.categorias{
+    position: relative;
+}
 
+.carrosel-categorias{
+    display: flex;
+    overflow-x: hidden;
+}
+
+.carrosel-categorias img{
+    width: 150px;
+    height: 190px;
+    margin: 5px 8px 5px 8px;
+}
+
+.carrosel-categorias .btn-anterior, .carrosel-categorias .btn-proximo{
+    margin-top: 50px;
 }
