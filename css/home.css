@@ -201,3 +201,47 @@ main{
 .carrosel-categorias .btn-anterior, .carrosel-categorias .btn-proximo{
     margin-top: 50px;
 }
+
+/*PRODUTOS EM DESTAQUE*/
+.produtos-destaque{
+    padding-bottom: 30px;
+}
+
+.container-produtos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+
+.produto{
+    background-color: white;
+    padding: 8px;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+.produto figure{
+    width: 100%;
+    margin: 0;
+}
+
+.produto figure img{
+    width: 100%;
+}
+
+.produto figure figcaption{
+    color: rgb(109, 107, 107);
+    font-size: 0.9em;
+}
+
+.produto .desconto{
+    color: rgb(109, 107, 107);
+    font-size: 0.8em;
+}
+
+.produto .preco{
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+}
