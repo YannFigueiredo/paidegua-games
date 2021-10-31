@@ -4,6 +4,7 @@ body{
 
 main{
     background-color: rgb(44, 41, 41);
+    padding-top: 30px;
 }
 
 .container{
@@ -63,6 +64,17 @@ main{
 .logo{
     font-weight: bold;
     font-size: 1em;
+    text-decoration: none;
+}
+
+.main-header .logo:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.main-header .logo:hover{
+    color: white;
+    text-decoration: none;
 }
 
 .opcoes-header{
@@ -81,12 +93,17 @@ main{
     font-size: 1.4em;
 }
 
-.campo-busca{
+.container-busca .campo-busca{
     display: inline-block;
     width: 100%;
     margin-top: 15px;
     padding: 10px;
     box-sizing: border-box;
+}
+
+#busca-inline{
+    display: none;
+    color: #ffa90c;
 }
 
 .campo-busca:focus{
@@ -102,6 +119,15 @@ main{
     cursor: pointer;
     margin-left: -45px;
     background-color: #ffa90c;
+}
+
+#busca-inline .btn-busca{
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-left: -45px;
+    background-color: white;
 }
 
 /*MENU DO HEADER ABERTO*/
@@ -255,6 +281,16 @@ main{
     padding: 0;
 }
 
+.main-footer .logo:visited{
+    color: rgb(109, 107, 107);
+    text-decoration: none;
+}
+
+.main-footer .logo:hover{
+    color: rgb(109, 107, 107);
+    text-decoration: none;
+}
+
 .menu-footer li{
     list-style: none;
     display: block;
@@ -296,4 +332,28 @@ main{
 
 .infos-footer address{
     margin-top: 20px;
+}
+
+@media screen and (min-width: 765px){
+    /*HEADER*/
+    .container-topo-header{
+        grid-template-columns: 6% 20% 49% 25%;
+    }
+    
+    .container-busca .campo-busca{
+        margin: 0;
+    }
+
+    #busca-inline{
+        display: inline-block;
+    }
+        
+    #busca-bloco{
+        display: none;
+    }
+
+    /*FOOTER*/
+    .main-footer{
+        text-align: center;
+    }
 }
