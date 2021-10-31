@@ -245,3 +245,55 @@ main{
     font-weight: bold;
     font-size: 1.1em;
 }
+
+/*FOOTER*/
+.main-footer{
+    color: rgb(109, 107, 107);
+}
+
+.menu-footer{
+    padding: 0;
+}
+
+.menu-footer li{
+    list-style: none;
+    display: block;
+    margin-bottom: 35px;
+}
+
+.menu-footer a, .menu-footer a:visited{
+    color: rgb(109, 107, 107);
+    text-decoration: none;
+}
+
+.menu-footer a:hover{
+    color: #ffa90c;
+    text-decoration: underline;
+}
+
+.redes-sociais, .infos-footer{
+    background-color: rgb(236, 233, 233);
+    text-align: center;
+}
+
+.redes-sociais{
+    padding: 20px 0 20px 0;
+    font-size: 1.3em;
+}
+
+.redes-sociais a, .redes-sociais a:visited{
+    color: rgb(109, 107, 107);
+}
+
+.redes-sociais i{
+    margin: 0 8px 0 8px;
+}
+
+.infos-footer{
+    padding: 20px 0 20px 0;
+    border-top: 1px solid rgb(168, 167, 167);
+}
+
+.infos-footer address{
+    margin-top: 20px;
+}
