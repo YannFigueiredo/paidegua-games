@@ -28,6 +28,7 @@ main{
     box-sizing: border-box;
     width: 50px;
     height: 50px;
+    cursor: pointer;
 }
 
 .btn-anterior{
@@ -206,6 +207,10 @@ main{
     overflow-x: hidden;
     box-sizing: border-box;
     position: relative;
+}
+
+.carrosel-consoles img{
+    transition: transform 0.6s;
 }
 
 /*CARROSEL DE CATEGORIAS*/
