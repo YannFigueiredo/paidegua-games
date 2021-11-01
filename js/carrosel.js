@@ -28,13 +28,13 @@ function Carrosel(config){
 
     function avancarSlide(){
         for(var i = 0; i < calcularDeslocamento(); i++){
-            console.log('slide atual: ', slideAtual);
-            console.log('slide posterior: ', slideAtual+1);
             posicaoAtual = Math.abs(posicaoAtual) >= checarDeslocamento() ? 0 : posicaoAtual - deslocamento;
-            console.log('posicao atual: ', posicaoAtual);
 
             _this.itens[slideAtual].style.transform = 'translateX('+ posicaoAtual +'px)';
-            _this.itens[slideAtual+1 >= _this.itens.length ? 0 : slideAtual+1].style.transform = 'translateX('+ posicaoAtual +'px)';
+
+            for(var i = slideAtual+1 >= _this.itens.length ? 0 : slideAtual+1; i < _this.itens.length; i++){
+                _this.itens[i].style.transform = 'translateX('+ posicaoAtual +'px)';
+            }
         }
 
         slideAtual += 1;
@@ -42,13 +42,13 @@ function Carrosel(config){
 
     function voltarSlide(){
         for(var i = 0; i < calcularDeslocamento(); i++){
-            console.log('slide atual: ', slideAtual);
-            console.log('slide posterior: ', slideAtual-1);
             posicaoAtual = posicaoAtual == 0 ? -1*checarDeslocamento() : posicaoAtual + deslocamento;
-            console.log('posicao atual: ', posicaoAtual);
 
             _this.itens[slideAtual].style.transform = 'translateX('+ posicaoAtual +'px)';
-            _this.itens[slideAtual-1 < 0 ? _this.itens.length-1  : slideAtual-1].style.transform = 'translateX('+ posicaoAtual +'px)';
+
+            for(var i = slideAtual-1 < 0 ? _this.itens.length-1 : slideAtual-1; i < _this.itens.length; slideAtual-1 < 0 ? i-- : i++){
+                _this.itens[i].style.transform = 'translateX('+ posicaoAtual +'px)';
+            }
         }
 
         slideAtual -= 1;
