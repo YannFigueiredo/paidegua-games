@@ -357,6 +357,11 @@ main{
     }
 
     /*HEADER*/
+    .main-header{
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
     .container-topo-header{
         grid-template-columns: 6% 20% 49% 25%;
     }
@@ -373,8 +378,14 @@ main{
         display: none;
     }
 
+    /*PRODUTOS EM DESTAQUE*/
+    .produtos-destaque{
+        padding-bottom: 20px;
+    }
+
     /*FOOTER*/
     .main-footer{
         text-align: center;
+        margin-top: 30px;
     }
 }

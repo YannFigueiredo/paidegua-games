@@ -20,16 +20,22 @@ function Carrosel(config){
     if(_this.tam_container < 1250){
         var posicao_scroll = 0;
 
+        controlarBtn();
+
         _this.container.addEventListener('scroll', function(){
             posicao_scroll = _this.container.scrollLeft;
         });
 
         _this.btnAnterior.addEventListener('click', function(){ 
             _this.container.scroll((posicao_scroll - _this.container.clientWidth), 0);
+
+            controlarBtn();
         });
 
         _this.btnProximo.addEventListener('click', function(){
             _this.container.scroll(posicao_scroll + _this.container.clientWidth, 0);
+
+            controlarBtn();
         });
     }else{
         _this.btnAnterior.addEventListener('click', function(){
@@ -102,5 +108,21 @@ function Carrosel(config){
 
     function checarDeslocamento(){
         return (_this.itens.length-1)*(qtdeparcelas*deslocamento);
+    }
+
+    function controlarBtn(){
+        if(_this.container.scrollLeft == 0){
+            _this.btnAnterior.style.display = 'none';
+        }else if((_this.container.scrollLeft + _this.container.clientWidth) >= _this.container.scrollWidth){
+            _this.btnProximo.style.display = 'none';
+        }
+
+        if(_this.container.scrollLeft > 0){
+            _this.btnAnterior.style.display = 'flex';
+        }
+        
+        if((_this.container.scrollLeft + _this.container.clientWidth) < _this.container.scrollWidth){
+            _this.btnProximo.style.display = 'flex';
+        }
     }
 }
