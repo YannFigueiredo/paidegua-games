@@ -226,7 +226,7 @@ main{
 .carrosel-categorias img{
     width: 150px;
     height: 190px;
-    margin: 5px 8px 5px 8px;
+    margin: 5px 10px 5px 10px;
 }
 
 .carrosel-categorias .btn-anterior, .carrosel-categorias .btn-proximo{
@@ -340,6 +340,22 @@ main{
 }
 
 @media screen and (min-width: 765px){
+    .container{
+        padding: 0 30px;
+    }
+
+    /*.carrosel-categorias{
+        border: 1px solid red;
+    }
+
+    .categorias{
+        border: 1px solid green;
+    }*/
+
+    .carrosel-categorias .btn-anterior, .carrosel-categorias .btn-proximo{
+        margin: 60px 10px 0 10px;
+    }
+
     /*HEADER*/
     .container-topo-header{
         grid-template-columns: 6% 20% 49% 25%;

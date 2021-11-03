@@ -17,27 +17,43 @@ function Carrosel(config){
     console.log('deslocamento total: ', checarDeslocamento());
     console.log('tamanho container: ', _this.container.clientWidth);
 
-    _this.btnAnterior.addEventListener('click', function(){
-        voltarSlide();
+    if(_this.tam_container < 1250){
+        var posicao_scroll = 0;
 
-        if(parcelaAtual >= qtdeparcelas){
-            slideAtual -= 1;
-            parcelaAtual = 0;
-        }
+        _this.container.addEventListener('scroll', function(){
+            posicao_scroll = _this.container.scrollLeft;
+        });
 
-        atualizarSlideAtual();
-    });
+        _this.btnAnterior.addEventListener('click', function(){ 
+            _this.container.scroll((posicao_scroll - _this.container.clientWidth), 0);
+        });
 
-    _this.btnProximo.addEventListener('click', function(){
-        avancarSlide();
-
-        if(parcelaAtual >= qtdeparcelas){
-            slideAtual += 1;
-            parcelaAtual = 0;
-        }
-
-        atualizarSlideAtual();
-    });
+        _this.btnProximo.addEventListener('click', function(){
+            _this.container.scroll(posicao_scroll + _this.container.clientWidth, 0);
+        });
+    }else{
+        _this.btnAnterior.addEventListener('click', function(){
+            voltarSlide();
+    
+            if(parcelaAtual >= qtdeparcelas){
+                slideAtual -= 1;
+                parcelaAtual = 0;
+            }
+    
+            atualizarSlideAtual();
+        });
+    
+        _this.btnProximo.addEventListener('click', function(){
+            avancarSlide();
+    
+            if(parcelaAtual >= qtdeparcelas){
+                slideAtual += 1;
+                parcelaAtual = 0;
+            }
+    
+            atualizarSlideAtual();
+        });
+    }
 
     function calcularParcelasDeslocamento(){
         return (_this.tam_container/_this.container.clientWidth);
