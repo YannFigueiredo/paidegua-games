@@ -14,4 +14,11 @@
         btn_anterior: '.carrosel-categorias .btn-anterior',
         btn_proximo: '.carrosel-categorias .btn-proximo'
     })
+
+    menu_principal = new Menu({
+        menu: '.container-menu',
+        menuInterno: '.container-menu .interno',
+        btnMenu: '.btn-menu',
+        btnMenuAberto: '.btn-menu-aberto'
+    });
 }());

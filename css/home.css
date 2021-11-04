@@ -56,6 +56,19 @@ main{
     grid-gap: 0;
 }
 
+.btn-menu-aberto{
+    cursor: pointer;
+    font-size: 1.4em;
+    text-align: left;
+    background-color: #ffa90c;
+    display: inline-block;
+    /*width: 80px;
+    height: 80px;*/
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .btn-menu{
     cursor: pointer;
     font-size: 1.4em;
@@ -140,8 +153,10 @@ main{
     position: absolute;
     top: 0;
     left: 0;
-    overflow-y: scroll;
-    display: none;
+    background-color: white;
+    overflow-y: auto;
+    z-index: 3;
+    transform: translateX(-265px);
 }
 
 .topo-div-menu{
@@ -152,16 +167,20 @@ main{
     width: 100%;
     height: 80px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .menu{
     margin: 0;
     padding: 0;
+    z-index: 4;
 }
 
 .menu li{
     list-style: none;
     font-size: 0.9em;
+    z-index: 5;
+    color: black;
 }
 
 .menu .btn-expandir-menu{
@@ -188,6 +207,7 @@ main{
 .menu-interno li{
     list-style: none;
     padding: 13px 10px;
+    color: black;
 }
 
 /*CARROSEL DE APRESENTAÇÃO DE CONSOLES*/
