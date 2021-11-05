@@ -17,6 +17,8 @@ function Carrosel(config){
     console.log('deslocamento total: ', checarDeslocamento());
     console.log('tamanho container: ', _this.container.clientWidth);
 
+    monitorarJanela();
+
     if(_this.tam_container < 1250){
         var posicao_scroll = 0;
 
@@ -124,5 +126,13 @@ function Carrosel(config){
         if((_this.container.scrollLeft + _this.container.clientWidth) < _this.container.scrollWidth){
             _this.btnProximo.style.display = 'flex';
         }
+    }
+
+    function monitorarJanela(){
+        window.addEventListener('resize', function(){
+            qtdeparcelas = window.innerWidth > 765 ? 1 : 2;
+            parcelaAtual = 0;
+            deslocamento = _this.tam_container/qtdeparcelas;
+        });
     }
 }

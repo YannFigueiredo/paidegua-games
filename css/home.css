@@ -51,7 +51,7 @@ main{
 
 .container-topo-header{
     display: grid;
-    grid-template-columns: 6% 54% 40%;
+    grid-template-columns: 6% 49% 45%;
     grid-template-rows: auto;
     grid-gap: 0;
 }
@@ -255,12 +255,14 @@ main{
 .carrosel-categorias{
     display: flex;
     overflow-x: hidden;
+    transition: scroll 0.4s;
 }
 
 .carrosel-categorias img{
     width: 150px;
     height: 190px;
     margin: 5px 10px 5px 10px;
+    transition: scroll 0.4s;
 }
 
 .carrosel-categorias .btn-anterior, .carrosel-categorias .btn-proximo{
