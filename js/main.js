@@ -19,6 +19,8 @@
         menu: '.container-menu',
         menuInterno: '.container-menu .interno',
         btnMenu: '.btn-menu',
-        btnMenuAberto: '.btn-menu-aberto'
+        btnMenuAberto: '.btn-menu-aberto',
+        btnExpandirMenu: '.btn-expandir-menu',
+        btnMenuInterno: '.btn-menu-interno'
     });
 }());

@@ -1,32 +1,47 @@
 function Menu(config){
     this.menu = document.querySelector(config.menu);
+    this.menuInterno = document.querySelectorAll(config.menuInterno);
     this.btnMenu = document.querySelector(config.btnMenu);
     this.btnMenuAberto = document.querySelector(config.btnMenuAberto);
+    this.btnExpandirMenu = document.querySelectorAll(config.btnExpandirMenu);
+    this.btnMenuInterno = document.querySelectorAll(config.btnMenuInterno);
 
     _this = this;
 
-    _this.btnMenu.addEventListener('click', abrirFecharMenu);
+    console.log(_this.btnMenuInterno);
 
-    function abrirFecharMenu(){
-        if(_this.menu.style.transform != 'translate(0px)'){
-            abrirMenu();
-        }else{
-            fecharMenu();
-        }
+    _this.btnMenu.addEventListener('click', abrirMenu);
+
+    _this.btnMenuAberto.addEventListener('click', fecharMenu);
+    
+    for(let i = 0; i < _this.btnExpandirMenu.length; i++){
+        _this.btnExpandirMenu[i].addEventListener('click', function(){
+            abrirMenuInterno(_this.menuInterno[i].id);
+        })
+    }
+
+    for(let i = 0; i < _this.btnMenuInterno.length; i++){
+        _this.btnMenuInterno[i].addEventListener('click', function(){
+            for(let i = 0; i < _this.menuInterno.length; i++){
+                fecharMenuInterno(_this.menuInterno[i].id);
+            }
+        })
     }
 
     function abrirMenu(){
         _this.menu.style.transform = 'translate(0px)';
-        //_this.btnMenuAberto.style;
-        //_this.btnMenu.querySelector('i').classList.remove('fa-bars');
-        //_this.btnMenu.querySelector('i').classList.add('fa-times');
     }
 
     function fecharMenu(){
         _this.menu.style.transform = 'translate(-265px)';
-        _this.btnMenu.style.transform = 'translate(0px)';
-        _this.btnMenu.querySelector('i').classList.remove('fa-times');
-        _this.btnMenu.querySelector('i').classList.add('fa-bars');
     }
 
+    function abrirMenuInterno(_menu){
+        console.log(_menu);
+        document.getElementById(_menu).style.transform = 'translate(0px)';
+    }
+
+    function fecharMenuInterno(_menu){
+        document.getElementById(_menu).style.transform = 'translate(-265px)';
+    }
 }

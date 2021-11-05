@@ -62,9 +62,8 @@ main{
     text-align: left;
     background-color: #ffa90c;
     display: inline-block;
-    /*width: 80px;
-    height: 80px;*/
     position: absolute;
+    padding: 8px;
     right: 0;
     top: 0;
 }
@@ -159,6 +158,10 @@ main{
     transform: translateX(-265px);
 }
 
+.container-menu .interno{
+    z-index: 4;
+}
+
 .topo-div-menu{
     background-color: #ffa90c;
     color: white;
@@ -195,10 +198,6 @@ main{
     float: right;
 }
 
-.container-menu .interno{
-   display: none;
-}
-
 .menu-interno{
     margin: 0;
     padding: 0;
@@ -208,6 +207,11 @@ main{
     list-style: none;
     padding: 13px 10px;
     color: black;
+}
+
+.btn-menu-interno{
+    cursor: pointer;
+    font-size: 1.4em;
 }
 
 /*CARROSEL DE APRESENTAÇÃO DE CONSOLES*/
