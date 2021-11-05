@@ -156,10 +156,12 @@ main{
     overflow-y: auto;
     z-index: 3;
     transform: translateX(-265px);
+    transition: transform 0.4s;
 }
 
 .container-menu .interno{
     z-index: 4;
+    box-sizing: border-box;
 }
 
 .topo-div-menu{
@@ -207,11 +209,19 @@ main{
     list-style: none;
     padding: 13px 10px;
     color: black;
+    box-sizing: border-box;
+}
+
+.menu-interno li a, .menu-interno li a:hover{
+    text-decoration: none;
+    color: black;
 }
 
 .btn-menu-interno{
     cursor: pointer;
     font-size: 1.4em;
+    display: inline-block;
+    width: 250px;
 }
 
 /*CARROSEL DE APRESENTAÇÃO DE CONSOLES*/
@@ -228,7 +238,7 @@ main{
     padding: 0;
     height: 317px;
     max-width: 1250px;
-    overflow-x: hidden;
+    overflow: hidden;
     box-sizing: border-box;
     position: relative;
 }
