@@ -90,8 +90,9 @@ main{
     text-decoration: none;
 }
 
-.opcoes-header{
+.opcoes-header, .opcoes-header a, .opcoes-header a:visited{
     text-align: right;
+    color: white;
 }
 
 .opcoes-header .perfil, .favoritos, .cesta{
@@ -379,14 +380,6 @@ main{
     .container{
         padding: 0 30px;
     }
-
-    /*.carrosel-categorias{
-        border: 1px solid red;
-    }
-
-    .categorias{
-        border: 1px solid green;
-    }*/
 
     .carrosel-categorias .btn-anterior, .carrosel-categorias .btn-proximo{
         margin: 60px 10px 0 10px;

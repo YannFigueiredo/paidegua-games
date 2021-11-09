@@ -36,10 +36,6 @@ function Carrosel_Slides(config){
             atualizarSlideAtual();
     });
 
-    /*function calcularParcelasDeslocamento(){
-        return (_this.tam_container/_this.container.clientWidth);
-    }*/
-
     function avancarSlide(){
         if(qtdeparcelas == 1 && Math.abs(posicaoAtual) >= checarDeslocamento()){
             posicaoAtual = 0;
