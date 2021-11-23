@@ -8,8 +8,6 @@ function Menu(config){
 
     _this = this;
 
-    console.log(_this.btnMenuInterno);
-
     _this.btnMenu.addEventListener('click', abrirMenu);
 
     _this.btnMenuAberto.addEventListener('click', fecharMenu);
